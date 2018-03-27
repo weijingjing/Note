@@ -1,0 +1,83 @@
+# HTML
+## 点击号码打电话
+`<a href="tel:18236938033">18236938033</a>`
+
+## 点击邮件发送邮件
+`<a href="mailto:wjj@ctrip.com">wjj@ctrip.com</a>`
+
+# CSS
+```
+--覆盖
+.cm-header {
+   background-color:#66cef5 !important;
+}
+
+--背景样式
+body{padding-left:10px;padding-right:10px;padding-top:10px;background-color:#ffffff;}
+
+--表格无边框
+table tr td { border: 0px #dededf solid; }
+table{margin:0}
+ul{padding-left: 22px !important ;}
+
+--行无标识
+ul li{list-style-type:disc;}
+
+--两列比例
+div[data-elementid="4509"] .col-3 {
+    width:45%
+}
+div[data-elementid="4509"] .col-9 {
+    width:55%
+}
+
+--删除标题
+.flag .flag-header .flag-tit{
+	display:none;
+	}
+
+--重写高
+div[data-elementid="4787"] .col-3 {
+    height:auto;
+}
+
+--更改标题样式
+div[data-elementid="4572"] .col-3 label {
+    font-weight: bolder;
+    font-size:20px;
+    color:black;
+}	
+```
+
+`JavaScript JQuary`
+
+# JQuery
+```
+--修改图片样式
+window.onload= function(){
+    $("div[data-elementid='4455']").append('<img src="http://images4.c-ctrip.com/target/Z9090o000000ezcv49A75.jpg" style="width:100%">').append('<img src="http://images4.c-ctrip.com/target/Z90g0o000000exls300AD.jpg" style="width:100%">')
+}
+
+--改写
+window.onload= function(){
+    $("div[data-elementid='4787'] .control-label").html('<p>资产证明：<br>申请人所在公司年收入<br>是否在12万5千元（含）以上？</p>');
+}
+
+--追加
+window.onload= function(){
+    $("div[data-elementid='4502']").
+    append('<img src="http://images4.c-ctrip.com/target/Z9050n000000ehlpgBD0E.jpg" style="width:100%">')
+    $("div[data-elementid='4505']").
+    append('<img src="http://images4.c-ctrip.com/target/Z9050n000000ehlpgBD0E.jpg" style="width:100%">')
+    $("div[data-elementid='4511']").
+    append('<img src="http://images4.c-ctrip.com/target/Z90t0n000000ef3r65A99.jpg" style="width:100%">')	
+    }
+
+--修改
+$("div[data-elementid='4597']").find('.inner-reminder').html("<div style='line-height:25px;'>1.此链接仅为收集您的往返火车信息<br>2.您的往返火车需自行出票；抵达南京后需自行前往酒店<br>3.酒店地址：南京香格里拉大酒店(南京市鼓楼区中央路329号)<br></div>");
+
+--追加图片
+$("div[class='main-viewport']").
+    append('<img src="http://images4.c-ctrip.com/target/Z90h0q000000gj3iz49D5.jpg" style="width:100%">')    
+
+```
