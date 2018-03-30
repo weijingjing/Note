@@ -1,0 +1,10 @@
+# SQL
+
+## 查询--非空<>
+'''
+select dbo.Staffs.StaffName,dbo.Staffs.StaffMobile from dbo.Staffs  
+left outer join dbo.StaffGroupMapping 
+on  dbo.Staffs.StaffID = dbo.StaffGroupMapping.StaffID 
+where (dbo.StaffGroupMapping.IsGroupLeader='T' and dbo.Staffs.StaffMobile <> '')
+
+'''
