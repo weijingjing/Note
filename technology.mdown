@@ -73,6 +73,9 @@ window.onload= function(){
     append('<img src="http://images4.c-ctrip.com/target/Z90t0n000000ef3r65A99.jpg" style="width:100%">')	
     }
 
+--在控制台上面调试
+$(".mice_app_event_info_time").html("<span class='mice_app_event_bar_time'></span>2018-04-20")
+
 --修改
 $("div[data-elementid='4597']").find('.inner-reminder').html("<div style='line-height:25px;'>1.此链接仅为收集您的往返火车信息<br>2.您的往返火车需自行出票；抵达南京后需自行前往酒店<br>3.酒店地址：南京香格里拉大酒店(南京市鼓楼区中央路329号)<br></div>");
 
