@@ -22,42 +22,55 @@
 - .nav{width:100%;height:30px;position:fixed;top:0;left:0;}
 
 
+### 盒子模型
+- float 浮动元素由于脱离了普通的文档流，不再占用原来文档中的位置，因此无法把父元素撑开。
+- 浮动会让元素塌陷，即被浮动元素的父元素不具有高度，如：一个父元素包含了浮动元素，它将塌陷具有零高度。
+- 处理塌陷方法：1.浮动元素后加div设置（clear:both;height:0;overflow:hidden） 2.使用clearfix  http://www.imooc.com/wenda/detail/11604
+3.设置副元素浮动
+'''
+eg:<style type="text/css">
 
-
-
-
-
-<div id="the_header">
-
-    <div class="header_share_wrap dropdown-list">
-            <a href='tel:+1-860-633-5907' class='phone' data-icon='A' title='(860) 633-5907'></a>        
-            <ul class="share_list"><span class="share_title">Follow Us</span>
-            <ul class="share_icons">
-                <ul class="social-media-links">
-                <li class="facebook">
-                <a href="http://www.facebook.com/panda.homecare" title="Facebook" target="_blank" ></a>
-                </li>
-                <li class="sendtofriend">
-                <a href="mailto:?subject=Check out Panda Home Care&amp;body=I thought you%27d be interested in this site%3A%0Ahttp%3A%2F%2Fpandahomecare.com%2F" title="Send to a Friend" target="_blank" class="email_icon"></a></li>
-                <li class="printthispage"><a href="javascript:window.print()" title="Print This Page" target="_blank" class="print_icon"></a></li></ul>
-            </ul>
-        </ul>
+/*在此定义相应的类选择器，并根据要求设置相关CSS属性*/
+.mainBox{	width:960px;	margin:0 auto;	background-color:#CFF;	overflow:visible;}
+.leftBox{	width:740px;	height:300px;	background-color:#C9F;	float:left;}
+.rightBox{	width:210px;	height:300px;	background-color:#FCF;	float:right;}
+.clear{	clear:both;	height:0;/*解决IE6下有高度的问题*/	overflow:hidden;}
+</style>
+<!--在此添加相应的div标签-->
+<div class="mainBox"> 
+    <div class="leftBox"></div>
+     <div class="rightBox"></div>
+      <div class="clear"></div>
     </div>
+''''
 
-<div class="header_color">
-    <div id='_the_logo' class='_is_plugin header-logo' slug='_the_logo' data-extra-args='{"section":"header"}'>    <h2 class="logo logo-v2">
+#### overflow属性
+#### 属性规定当内容溢出元素框时发生什么事情
+- visible 默认值--内容都呈现
+- hidden 内容被修剪--其余内容不可见
+- scroll 内容被修剪--浏览器显示滚动条以便查看其余内容
+- auto 如果内容被裁剪--显示滚动条
+- inherit 继承父级元素此属性
 
-    <div class="logo-variation logo-variation-header">
-    <div  class="logo-slot pct100 slot_0 slot-type-image align-left"><a href="http://pandahomecare.com" title="Panda Home Care" rel="home">
-    <img  src="/files/2015/05/logo.jpg" /></a></div>
-    </div>
-    <div class="logo-variation logo-variation-mobile">
-    <div  class="logo-slot pct100 slot_0 slot-type-image align-center"><a href="http://pandahomecare.com" title="Panda Home Care" rel="home">
-    <img  src="/files/2015/05/logo1.jpg" /></a></div>
-    </div>    
-    </h2>
-</div>        
-<div class="sa-mobile-triggers">
-            <a href="#" class="trigger share-trigger"><span class="trigger-icon">!</span><span class="trigger-label">Follow Us</span></a>
-            <a href="#" class="trigger sa-menu-trigger"><span class="trigger-icon">a</span><span class="trigger-label">Menu</span></a>
-        </div>
+
+#### vertical-align 属性设置元素的垂直对齐方式
+- baseline 默认,元素放置在父元素的基线上。
+- sub 垂直对齐文本的下标。
+- super   垂直对齐文本的上标
+- top 把元素的顶端与行中最高元素的顶端对齐
+- text-top    把元素的顶端与父元素字体的顶端对齐
+- middle  把此元素放置在父元素的中部。
+- bottom  把元素的顶端与行中最低的元素的顶端对齐。
+- text-bottom 把元素的底端与父元素字体的底端对齐。
+- length   eg:10px
+- %   使用 "line-height" 属性的百分比值来排列此元素。允许使用负值。
+- inherit 规定应该从父元素继承 vertical-align 属性的值。
+
+eg:
+垂直对齐一幅图像：
+img
+  {
+  vertical-align:text-top;
+  }
+
+
