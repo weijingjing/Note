@@ -73,4 +73,26 @@ img
   vertical-align:text-top;
   }
 
+# CSS3 animation动画效果
+- @keyframes 必须定义的
+- animation-name 动画名称
+- animation-duration 动画持续时间
+- animation-delay 延迟执行时间
+- animation-timing-function 动画形变函数指数
+- animation-play-state 播放状态指定
 
+### 考虑IE兼容性
+'''
+      @-webkit-keyframes myfirst {
+          0% {background: red;}
+          25% {background: yellow;}
+          50% {background: blue;}
+          100% {background: green;}
+      }
+          -webkit-animation-name: myfirst;
+          -webkit-animation-duration: 5s;
+          -webkit-animation-delay: 2s;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+          -webkit-animation-play-state: running;
+'''
