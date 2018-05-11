@@ -84,3 +84,13 @@ ACT：美国高考
 '''
 
 
+# 口语
+'''
+英语的学习方法：
+1.美国的政府和政策（理解美国时政的基础知识）：基础版-Youtube频道CrashCourse之American Government and Poltiics。进阶版-Great Course（TTC）之Modern Poilitical Tradition；还有Aermcican Government and Politics大学级教材
+2.流行音乐:Coursera 之History of Rock I,II和教材，还要去听每个曲子。流行音乐有FM电台Rock Music和AM电台Pop Music之分。一般年轻人都喜欢Rock Music。每个人会有喜欢不同年代的音乐风格，比如70年代，80年代，90年代
+3.电视剧：比如Doctor Who, Western World, Game of Throne , 绝望主妇，吸血鬼，Boston Legal
+4.卧底老板（Undercover Boss）
+5.Saludos Amigos 多看美国迪士尼动画
+6. 洋葱新闻--讽刺意义的新闻
+'''
