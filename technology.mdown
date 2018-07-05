@@ -83,4 +83,36 @@ $("div[data-elementid='4597']").find('.inner-reminder').html("<div style='line-h
 $("div[class='main-viewport']").
     append('<img src="http://images4.c-ctrip.com/target/Z90h0q000000gj3iz49D5.jpg" style="width:100%">')    
 
+
 ```
+
+
+
+# 中英文切换代码
+
+## JS
+
+'''
+window.onload= function(){
+$('.mice_app_event_info_image').append("<span class=\"navigation\"><a class=\"chinese\" onclick=\"location.href='http://www.baidu.com'\">中文</a><a class=\"english\" onclick=\"location.href='http://www.sina.com'\">En</a></span>")
+}
+'''
+## CSS
+
+'''
+.navigation{
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   margin: 10px;
+}
+
+.chinese {
+   background-color: red;
+   margin: 3px;
+}
+
+.english{
+    background-color: yellow;
+}
+'''
