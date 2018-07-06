@@ -47,6 +47,16 @@ div[data-elementid="4572"] .col-3 label {
     font-size:20px;
     color:black;
 }	
+
+--id
+#headerview {
+    display:none !important;
+}
+
+--背景色
+    background: url(http://images4.c-ctrip.com/target/Z9080u000000iuuxsDE4B.jpg) repeat !important;
+    background-size:100% 100%;
+
 ```
 
 `JavaScript JQuary`
@@ -83,6 +93,10 @@ $("div[data-elementid='4597']").find('.inner-reminder').html("<div style='line-h
 $("div[class='main-viewport']").
     append('<img src="http://images4.c-ctrip.com/target/Z90h0q000000gj3iz49D5.jpg" style="width:100%">')    
 
+--底部加图片
+window.onload= function(){
+$('.main-viewport').append('<img src="http://images4.c-ctrip.com/target/Z90h0u000000iw7734DE4.jpg" style="width:100%;position:fixed;bottom:0;">') 
+}
 
 ```
 
@@ -116,3 +130,23 @@ $('.mice_app_event_info_image').append("<span class=\"navigation\"><a class=\"ch
     background-color: yellow;
 }
 '''
+
+
+
+
+#JQuery--支持判断
+
+表单页面、预订结果页、订单详情页。均会引入js和css。
+如果三个页面都会用到要上传的js。可通过if进行区分。实例如下：
+$(function(){
+       if(window.location.href.toLowerCase().indexOf('orderdetail')>0){
+              //订单详情页
+              document.title = "预订信息";
+              $(".header-title").text("预订信息");
+              $(".figure-content").find('.grid-title').text("课程信息");
+       }else if(window.location.href.toLowerCase().indexOf('orderresult')>0){
+              //报名结果页的js操作
+       }else{
+              //表单页的js操作
+       }
+});
